@@ -24,9 +24,7 @@ classifiers = [
     # Specify the Python versions you support here.
     "Programming Language :: Python :: 3.10",
 ]
-dependencies = [
-    "gymnasium",
-]
+dependencies = []
 
 [build-system]
 requires = ["uv_build>=0.8.19,<0.9.0"]
