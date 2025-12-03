@@ -1,4 +1,4 @@
-# gen_ea_rl
+# create_rl
 Generative Design using Reinforcement Learning
 
 ## Installation/Running with Docker
@@ -16,5 +16,9 @@ Not tested as much, may lack some system dependecies that come with Docker base 
 
 ```
 uv venv --python 3.12 --seed
-uv pip install gen_rl
+uv pip install -e gen_rl
 ```
+
+## FAQ
+### Why are there X11 forwarding in the `docker-compose`?
+We need those to see the visualization inside docker. This is not needed for the web-based GUI.

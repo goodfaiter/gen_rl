@@ -12,7 +12,7 @@ from pathlib import Path
 from dataclasses import replace
 
 # Ensure CUDA selection etc. if needed (optional).
-# os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 # Import the training API from mjlab
 from mjlab.scripts.train import TrainConfig, run_train

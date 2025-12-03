@@ -4,7 +4,7 @@ import math
 import torch
 
 from mjlab.envs import ManagerBasedRlEnvCfg
-from mjlab.envs.mdp.actions import JointPositionActionCfg
+from mjlab.envs.mdp.actions import JointPositionActionCfg, JointVelocityActionCfg
 from mjlab.managers.manager_term_config import (
   ObservationGroupCfg,
   ObservationTermCfg,
@@ -49,7 +49,7 @@ def create_cartpole_actions() -> dict[str, JointPositionActionCfg]:
   return {
     "joint_pos": JointPositionActionCfg(
       asset_name="robot",
-      actuator_names=(".*",),
+      actuator_names=("slider"),
       scale=20.0,
       use_default_offset=False,
     ),

@@ -10,7 +10,12 @@ services:
             - driver: nvidia
               count: all
               capabilities: [gpu]
-    ports:
-      - 8087:8080
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+    privileged: true
+    network_mode: host
     volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - ${HOME}/.Xauthority:/root/.Xauthority:rw
       - ./:/workspace
